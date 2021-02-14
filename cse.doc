@@ -37,7 +37,7 @@
                                                       If these components are exploited, it will results to seroius data loss.
 
     x) Insufficient Logging and monitoring:- due to this monitoring attackers will attack sysytems, destroy data nad extract data
-                                                                                                                                                                                                                                                         
+
 3)  What is the difference between a process and a thread? - 2 Marks
 
                          Process                                                       Thread
@@ -86,6 +86,40 @@
             ii) chmod -rwx directoryname to remove permissions.
             iii) chmod +x filename to allow executable permissions.
             iv) chmod -wx filename to take out write and executable permissions.
+
+8) What is Transaction? Explain how transaction happens in mongodb and postgresql? - 10 Marks
+
+   Transaction:- It is a function, if the promise returned from the callback is resolved successfully then the transaction is committed
+                 If the promise is rejected then the transaction is rolled backup
+
+   postgresql:- in postgresql a transaction is set up by the SQL commands of the transaction with BEGIN and COMMIT commands.
+                If you do not issue a BEGIN command, then each individual statement has an implicit BEGIN and (if successful) COMMIT 
+                wrapped around it.     
+                It is the propagation of one or more changes to the database. For example, if you are creating a record, updating a record, 
+                or deleting a record from the table, then you are performing transaction on the table          
+
+   mongodb:- mongodb supports single and multiple document transactions:- 
+             i) in single document transaction it will save one document so database schema should be designed to save all the data needed 
+                in one document      
+             ii) in multi-document transaction When a transaction commits, all data changes made in the transaction are saved and visible outside 
+                 the transaction.Until a transaction commits, the data changes made in the transaction are not visible outside the transaction 
+                 When a transaction aborts, all data changes made in the transaction are discarded without ever becoming visible. 
+                 For example, if any operation in the transaction fails, the transaction aborts and all data changes made in the transaction 
+                 are discarded without ever becoming visible        
+
+9) What is the CAP theorem? Give examples of each? - 5 Marks
+
+   CAP Theorem:- CAP stands for Consistency, Availability and partition tolerance. The CAP theorem states that a distributed system cannot 
+                 simultaneously be consistent, available, and partition tolerant
+
+                 E.x:- in a distributed system, if a partition occurs between two nodes, it is impossible to provide consistent data on both
+                       the nodes and availability of complete data
+
+10) Differentiate between multithreading and asynchronous? - 2 Marks
+
+    multithreading:- Multi threading means that your program runs parallel on multiple threads
+
+    asynchronous:- asynchronous refers to something not occuring at the same time as another thing.
 
 11) Differentiate between SQL and No-SQL? - 5 Marks
 
