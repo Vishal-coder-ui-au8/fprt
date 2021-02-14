@@ -1,0 +1,146 @@
+1) What is the similarity between "ping" & "traceroute"? - 2 Marks
+
+   Ping and traceroute both are primarily used to test the network connectivity issues. 
+   Ping does the same with a direct approach to the host while traceroute approaches the host gathering information at each node it 
+   passes through.
+
+2)  What is OWASP? And explain the top to Owasp?- 10 Marks
+
+    OWASP:- The Open Web Application Security Project (OWASP) is a non-profit foundation dedicated to improving the security of software
+    
+    Top 10 OWASP:-
+
+    i) Injection:- Injection flaws, such as SQL, NoSQL, OS injection, occur when untrusted data is sent to an interpreter as a command or query. 
+                   The attacker’s hostile data can trick the interpreter for accessing data without proper authorization.
+
+    ii) Broken AUthentication:- Functions related to authentication implemented incorrectly, allowing attackers to steal the passwords, 
+                                session tokens and accessing other user's identities.
+
+    iii) Sensitive Data information:- Many web applications and apis do not protect sensitive data like financial, complicated docs.
+                                      Attackers may steal the data and credit card information.
+
+    iv) XML External Entities:- older xml processors evaluate external entity references within xml documnets which can be diclose to DDos 
+                                attack,...
+
+    v) Broken Access Control:- Due to improper enforcement restrictions on authentication attckers can access unauthorized data from user'
+                               accounts, sensitive data,...
+
+    vi) Security Misconfiguration:- insecure default configurations, incomplete configurations, misconfigured HTTP headers. All these should 
+                                    be securely cofigured.
+
+    vii) Cross-Site Scripting(XSS):- occur whenever an application includes untrusted data in a new web pagewithout proper validation.
+                                     XSS allows attackers to execute scripts in the victim's browser which can get hacked user sessions
+
+    viii) Insecure Deserialization:- Leads to remote code execution results in injection attacks, escalation attacks.
+
+    ix) Using Components with known vulnerabilities:- libraries, frameworks and software modules run with the same privileges a sthe apllication.
+                                                      If these components are exploited, it will results to seroius data loss.
+
+    x) Insufficient Logging and monitoring:- due to this monitoring attackers will attack sysytems, destroy data nad extract data
+                                                                                                                                                                                                                                                         
+3)  What is the difference between a process and a thread? - 2 Marks
+
+                         Process                                                       Thread
+    --> A program in execution (or) an active program is            --> A thread is a subset or part of the process.   
+        known as Process.                                               execution of running multiple tasks or programs at the 
+                                                                        same time.
+
+    --> If one server process is blocked no other server process    --> Second thread in the same task could run, while one server 
+        can execute until the first process unblocked.                  thread is blocked.
+                                                                    
+    --> Process is isolated does not share memory with any other    --> Threads share memory.
+        process.                                                                
+
+    --> Process takes more time to terminate.	                    --> Thread takes less time to terminate.    
+
+4) What is the difference between exec and fork? - 2 Marks    
+
+   fork:-  fork is a system call which creates the duplicate of the calling process and the new process is known as child process.
+           In other words, if a process is running and one wants to create a exact copy of that particular process then fork() is used.
+           Here, the process running id will vary.
+   
+   exec:-  In exec id will be same for current and new process. exec system call always replaces the executed program with a new process.
+           In other words, it replaces an existing process with a new program specified in the parameter of the exec().
+           Working:-  i) Create two files a.file and b.file
+                      ii) a.file is replacing process
+                      iii) b.file will call execv()
+                      iv) a.file will go to replace b.file having same running id.
+
+5) What is "nohup" used for? - 2 Marks
+
+   nohup stahns for no hangup. it is a command that ignores HUP signal. It is a signal that is delivered to a process when the terminal
+   is terminated. If we want to continue running process even after logout from the terminal, we use nohup command. It makes the
+   process present to HUP signals to make the program run even after logout.
+
+6) What is swap and what is it used for? - 2 Marks
+
+   Swap space is a virtual memory that is on hard disk, used when RAM is full and later when the RAM is free swap is no longer used 
+   In other words, it is the place where memory can be stored when RAM is no longer taking memory.
+
+7) What Unix/Linux commands will alter a files ownership, files permissions? - 2 Marks
+
+   --> Unix/Linux divides the file permissions into read, write and execute.
+   --> The permission on a file can be changed by "chmod" command.
+   --> "chown" command can change the ownership on a file.
+            i) chmod +rwx filename to add permissions.
+            ii) chmod -rwx directoryname to remove permissions.
+            iii) chmod +x filename to allow executable permissions.
+            iv) chmod -wx filename to take out write and executable permissions.
+
+11) Differentiate between SQL and No-SQL? - 5 Marks
+
+    SQL (Structured Query Language):- i) SQL databases use structured query language and have a predefined schema which cannot be changed.
+                                      
+                                      ii) SQL databases are table based.
+                                      
+                                      iii) SQL databases are primarily called as Relational Database Management System(RDBMS)
+                                      
+                                      iv) Vertically scalable
+                                      
+                                      v) SQL programming can be effectively used to insert, search, update, delete database records.
+                                      
+                                      vi) MySQL Database, Oracle, Ms SQL Server, Sybase, etc. use SQL.
+
+    NOSQL (Not only Sql):- i) NOSQL databases have dynamic schemas(schema changes as you add data) for unstructured data.
+                           
+                           ii) NOSQL databases are document, key-value, graph stores.
+                           
+                           iii) NoSQL database are primarily called as non-relational or distributed database
+                           
+                           iv) Horizontally scalable
+                           
+                           v) NoSQL is used for Big data and real-time web apps.
+                           
+                           vi) Twitter, Facebook, Google use NOSQL to collect terabytes of user data every single day where the user data 
+                               will be unstructured data.
+
+12) How do you stop a DDoS attack? - 2 Marks
+
+    It will prevent website from functioning correctly by sending multiple requests by exceeding the website's capacity to handle multiple requests.
+     
+    Steps to prevent:- i) identify the DDos attack at early stage because the earlier stage toubleshooting the problems sooner you can stop it.
+
+                       ii) Organization should react quickly and create a playbook that documents in detail when attack is detected
+
+                       iii) should call a DDos specialist to reduce the severity of attack.
+
+                       iv) should call host provider if you are not the host                                                             
+
+                       v) Secure network infrastructure
+
+13) What is the difference between hardlinks and symlinks? What happens when you remove the source to a symlink/hardlink? - 4 Marks                       
+ 
+    hardlinks:- i) it is a link that connects many files with the same datastructure called inode.
+
+                ii) if the original file is deleted, the hard link still exists as long as there is a file linked to the datastructure
+
+                iii) it can be used as a backup plan in the system if we lose a file we still have others consisting same file in inode.
+
+                iv) hard link cannot link to files not to directories 
+
+    symlinks:- i) Link that acts as a shortcut of a file. Each symlink file contains a different inode which links to original file 
+
+               ii) if symlink is deleted, the original still exists. but if original file gets deleted sym file will not work due to it links 
+                   to the nonexistent file.
+
+               iii) symlink can link to file or directory
